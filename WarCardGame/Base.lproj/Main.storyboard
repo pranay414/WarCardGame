@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,6 +20,19 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Mfm-QZ-xjk">
                                 <rect key="frame" x="146" y="54" width="122" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="hG7-7c-2ha"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hG7-7c-2ha"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="hG7-7c-2ha"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-KD-X7s" userLabel="CardsAndButtonStackView">
                                 <rect key="frame" x="72" y="352.5" width="270" height="231"/>
@@ -40,6 +53,7 @@
                                         <state key="normal" image="dealbutton"/>
                                     </button>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="adM-su-Gf7" userLabel="PlayerScoreStackView">
                                 <rect key="frame" x="20" y="755.5" width="66.5" height="86.5"/>
@@ -87,7 +101,9 @@
                             <constraint firstItem="SiA-eq-sAL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lJT-PP-hve"/>
                             <constraint firstItem="Mfm-QZ-xjk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="pbe-lO-0BL"/>
                             <constraint firstItem="Mfm-QZ-xjk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIg-EN-MDI"/>
-                            <constraint firstItem="9jC-KD-X7s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="wlF-nW-par"/>
+                            <constraint firstItem="9jC-KD-X7s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="wlF-nW-par">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adM-su-Gf7" secondAttribute="bottom" constant="20" id="wpY-VU-cKM"/>
                             <constraint firstAttribute="bottom" secondItem="SiA-eq-sAL" secondAttribute="bottom" id="xTi-kN-BzL"/>
                         </constraints>
